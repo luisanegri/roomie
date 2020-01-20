@@ -12,7 +12,8 @@ import {
 
 const styles = {
   card: {
-    maxWidth: 300
+    maxWidth: 300,
+    borderBottom: '3px solid #FB9A64'
   },
   media: {
     height: 200
