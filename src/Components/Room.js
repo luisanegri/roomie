@@ -29,8 +29,8 @@ const styles = {
   },
   avatar: {
     borderRadius: '50%',
-    width: '125px',
-    height: '125px',
+    width: '122px',
+    height: '112px',
     display: 'block',
     margin: '0 auto'
   },
@@ -63,9 +63,6 @@ const styles = {
   listPA: {
     listStyle: 'none',
     paddingLeft: 0
-  },
-  'cardCustom:last-child': {
-    paddingBottom: '16px !important'
   },
   listItem: {
     marginBottom: '2px'
@@ -148,6 +145,7 @@ function Room(props) {
                 </Grid>
               </CardContent>
             </Card>
+
             <section id="description">
               <Card className={classes.card} variant="outlined">
                 <CardContent className={classes.cardDesc}>
@@ -165,6 +163,7 @@ function Room(props) {
                 </CardContent>
               </Card>
             </section>
+
             <section id="priceavailability">
               <Card className={classes.card} variant="outlined">
                 <CardContent className={classes.cardDesc}>
@@ -191,13 +190,13 @@ function Room(props) {
                       <Typography component="span"> €60 per month</Typography>
                     </li>
                   </ul>
-
                   <Typography component="p">
                     Available from the 1st of February
                   </Typography>
                 </CardContent>
               </Card>
             </section>
+
             <section id="preferences">
               <Card className={classes.card} variant="outlined">
                 <CardContent className={classes.cardDesc}>
