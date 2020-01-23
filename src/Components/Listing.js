@@ -99,11 +99,13 @@ function Listing(props) {
           <Grid item xs={12} sm={4}>
             <Card className={classes.card}>
               <CardActionArea>
+                {/* <Link to={`/room/${room.id}`}> */}
                 <CardMedia
                   className={classes.media}
                   image="https://live.staticflickr.com/5034/5796076897_17825fa53d_b.jpg"
                   title="Contemplative Reptile"
                 />
+                {/* </Link> */}
                 <CardContent>
                   <Typography className={classes.cardDesc}>
                     Available from 1st of February

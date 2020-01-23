@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Listing from './Components/Listing';
 import Room from './Components/Room';
-import ListingForm from './Components/ListingForm';
+import ListingFormContainer from './Components/ListingFormContainer';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Listing}></Route>
         <Route exact path="/room" component={Room}></Route>
-        <Route exact path="/room/add" component={ListingForm}></Route>
+        <Route exact path="/room/add" component={ListingFormContainer}></Route>
       </Switch>
     </div>
   );

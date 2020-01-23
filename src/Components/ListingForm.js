@@ -7,7 +7,8 @@ import {
   ButtonGroup,
   Grid,
   FormControlLabel,
-  Checkbox
+  Checkbox,
+  Form
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -19,23 +20,25 @@ const styles = {
 };
 
 function ListingForm(props) {
-  const { classes } = props;
+  const { classes, onSubmit, onChange, value } = props;
   return (
     <React.Fragment>
       <Container>
         <Typography variant="h6" gutterBottom>
           Add a room
         </Typography>
-        <Grid container spacing={3} className={classes.gridForm}>
-          <form className={classes.root} noValidate autoComplete="off">
+        <form onSubmit={onSubmit}>
+          <Grid container className={classes.gridForm}>
             <Grid item xs={12}>
               <TextField
                 required
                 id="description"
                 name="description"
                 label="Description"
+                type="text"
                 fullWidth
-                autoComplete="fname"
+                value={value.description}
+                onChange={onChange}
               />
             </Grid>
             <Grid item xs={12}>
@@ -44,7 +47,10 @@ function ListingForm(props) {
                 id="image"
                 name="image"
                 label="Image"
+                type="text"
                 fullWidth
+                value={value.image}
+                onChange={onChange}
                 autoComplete="image"
               />
             </Grid>
@@ -54,7 +60,10 @@ function ListingForm(props) {
                 id="rent"
                 name="rent"
                 label="Rent"
+                type="number"
                 fullWidth
+                value={value.rent}
+                onChange={onChange}
                 autoComplete="rent"
               />
             </Grid>
@@ -63,6 +72,9 @@ function ListingForm(props) {
                 id="deposit"
                 name="deposit"
                 label="Deposit"
+                type="number"
+                value={value.deposit}
+                onChange={onChange}
                 fullWidth
                 autoComplete="deposit"
               />
@@ -73,6 +85,9 @@ function ListingForm(props) {
                 id="bills"
                 name="bills"
                 label="Bills"
+                type="number"
+                value={value.bills}
+                onChange={onChange}
                 fullWidth
                 autoComplete="bills"
               />
@@ -100,8 +115,8 @@ function ListingForm(props) {
               autoComplete="smoke"
             />
           </Grid> */}
-          </form>
-        </Grid>
+          </Grid>
+        </form>
       </Container>
     </React.Fragment>
   );
