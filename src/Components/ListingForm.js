@@ -5,150 +5,105 @@ import {
   Typography,
   Button,
   ButtonGroup,
-  Grid
+  Grid,
+  FormControlLabel,
+  Checkbox
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = {};
+const styles = {
+  gridForm: {
+    width: '50%',
+    margin: '0 auto'
+  }
+};
 
 function ListingForm(props) {
   const { classes } = props;
   return (
-    <div>
-      <Container maxWidth="lg">
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <form className={classes.root} noValidate autoComplete="off">
+    <React.Fragment>
+      <Container>
+        <Typography variant="h6" gutterBottom>
+          Add a room
+        </Typography>
+        <Grid container spacing={3} className={classes.gridForm}>
+          <form className={classes.root} noValidate autoComplete="off">
+            <Grid item xs={12}>
               <TextField
-                id="filled-full-width"
+                required
+                id="description"
+                name="description"
                 label="Description"
-                style={{ margin: 8, width: '60%' }}
-                margin="normal"
-                multiline={true}
-                rows={5}
-                rowsMax={5}
-                variant="filled"
+                fullWidth
+                autoComplete="fname"
               />
-
+            </Grid>
+            <Grid item xs={12}>
               <TextField
-                id="outlined-full-width"
+                required
+                id="image"
+                name="image"
                 label="Image"
-                style={{ margin: 8, width: '60%' }}
-                placeholder="Image"
-                margin="normal"
-                InputLabelProps={{
-                  shrink: true
-                }}
-                variant="outlined"
+                fullWidth
+                autoComplete="image"
               />
-              <section>
-                <Typography component="h5" className={classes.price}>
-                  Costs & Availability
-                </Typography>
-                <TextField
-                  id="outlined-multiline-flexible"
-                  label="Rent"
-                  placeholder="Rent"
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-textarea"
-                  label="Deposit"
-                  placeholder="Deposit"
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-textarea"
-                  label="Bills"
-                  placeholder="Bills"
-                  variant="outlined"
-                />
-                <div>
-                  <TextField
-                    id="date"
-                    label="Available from"
-                    type="date"
-                    defaultValue="2017-05-24"
-                    className={classes.textField}
-                    InputLabelProps={{
-                      shrink: true
-                    }}
-                  />
-                </div>
-              </section>
-              <section>
-                <Typography component="h5">Preferences</Typography>
-                <div>
-                  <Typography component="span">Gender</Typography>
-                  <ButtonGroup
-                    size="small"
-                    aria-label="small outlined button group"
-                  >
-                    <Button>Female</Button>
-                    <Button>Male</Button>
-                  </ButtonGroup>
-                </div>
-                <div>
-                  <Typography component="span">Couples</Typography>
-                  <ButtonGroup
-                    size="small"
-                    aria-label="small outlined button group"
-                  >
-                    <Button>Yes</Button>
-                    <Button>No</Button>
-                  </ButtonGroup>
-                </div>
-                <div>
-                  <Typography component="span">Students</Typography>
-                  <ButtonGroup
-                    size="small"
-                    aria-label="small outlined button group"
-                  >
-                    <Button>Yes</Button>
-                    <Button>No</Button>
-                  </ButtonGroup>
-                </div>
-
-                <div>
-                  <Typography component="span">Professionals</Typography>
-                  <ButtonGroup
-                    size="small"
-                    aria-label="small outlined button group"
-                  >
-                    <Button>Yes</Button>
-                    <Button>No</Button>
-                  </ButtonGroup>
-                </div>
-              </section>
-
-              <section>
-                <Typography component="h5">House Rules</Typography>
-                <div>
-                  <Typography component="span">Smoke</Typography>
-                  <ButtonGroup
-                    size="small"
-                    aria-label="small outlined button group"
-                  >
-                    <Button>Yes</Button>
-                    <Button>No</Button>
-                  </ButtonGroup>
-                </div>
-                <div>
-                  <Typography component="span">Pets</Typography>
-                  <ButtonGroup
-                    size="small"
-                    aria-label="small outlined button group"
-                  >
-                    <Button>Yes</Button>
-                    <Button>No</Button>
-                  </ButtonGroup>
-                </div>
-              </section>
-            </form>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                required
+                id="rent"
+                name="rent"
+                label="Rent"
+                fullWidth
+                autoComplete="rent"
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                id="deposit"
+                name="deposit"
+                label="Deposit"
+                fullWidth
+                autoComplete="deposit"
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                required
+                id="bills"
+                name="bills"
+                label="Bills"
+                fullWidth
+                autoComplete="bills"
+              />
+            </Grid>
+            {/* <Grid item xs={12} sm={6}>
+            
           </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              required
+              id="students"
+              name="students"
+              label="Students Accepted?"
+              fullWidth
+              autoComplete="students"
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              required
+              id="smoke"
+              name="smoke"
+              label="Smoke Allowed?"
+              fullWidth
+              autoComplete="smoke"
+            />
+          </Grid> */}
+          </form>
         </Grid>
       </Container>
-    </div>
+    </React.Fragment>
   );
 }
 
