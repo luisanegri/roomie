@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ListingForm from './ListingForm';
-import addRoom from '../actions/room.js';
+import { addRoom } from '../actions/room.js';
 
 export class ListingFormContainer extends Component {
   state = {

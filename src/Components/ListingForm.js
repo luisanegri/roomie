@@ -4,11 +4,7 @@ import {
   Container,
   Typography,
   Button,
-  ButtonGroup,
-  Grid,
-  FormControlLabel,
-  Checkbox,
-  Form
+  Grid
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -92,6 +88,9 @@ function ListingForm(props) {
                 autoComplete="bills"
               />
             </Grid>
+            <Button variant="contained" color="primary" type="submit">
+              Submit
+            </Button>
             {/* <Grid item xs={12} sm={6}>
             
           </Grid>

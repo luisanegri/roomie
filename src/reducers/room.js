@@ -1,8 +1,8 @@
 export default function(state = [], action = {}) {
   switch (action.type) {
-    case 'CREATE_ROOM':
+    case 'ADD_ROOM':
       return action.payload;
-    case 'READ_ROOMS':
+    case 'GET_ROOMS':
       return [...state, action.payload];
     case 'READ_ROOM':
       return action.payload;
