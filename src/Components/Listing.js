@@ -33,7 +33,6 @@ const styles = {
 };
 
 function Listing(props) {
-  console.log('props', props);
   const { classes } = props;
 
   const empty = !props.rooms.length;

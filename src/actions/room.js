@@ -18,7 +18,6 @@ export const addRoom = room => (dispatch, _getState) => {
     .send({ room })
     .then(response => {
       const action = AddRoomSuccess(response.body);
-      console.log('action', action);
       dispatch(action);
     })
     .catch(console.error);
@@ -36,7 +35,6 @@ export const getRooms = () => (dispatch, _getState) => {
     .get(`${baseUrl}/room`)
     .then(response => {
       const action = getRoomsSuccess(response.body);
-      console.log('action get rooms', action);
       dispatch(action);
     })
     .catch(console.error);
@@ -53,7 +51,6 @@ export const getRoom = id => (dispatch, _getState) => {
     .get(`${baseUrl}/room/${id}`)
     .then(response => {
       const action = getRoomSuccess(response.body);
-      console.log('action');
       dispatch(action);
     })
     .catch(console.error);
