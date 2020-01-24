@@ -20,7 +20,7 @@ export class ListingContainer extends Component {
 const mapStateToProps = state => {
   console.log('state', state);
   return {
-    rooms: state.room
+    rooms: state.rooms
   };
 };
 
