@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getRooms } from '../actions/room';
+import { getRooms } from '../../actions/room';
 import Listing from './Listing';
 
 export class ListingContainer extends Component {

@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import ListingContainer from './Components/ListingContainer';
-import RoomContainer from './Components/RoomContainer';
-import ListingFormContainer from './Components/ListingFormContainer';
+import ListingContainer from './Components/Rooms/ListingContainer';
+import RoomContainer from './Components/Rooms/RoomContainer';
+import ListingFormContainer from './Components/Rooms/ListingFormContainer';
 import Home from './Components/Home';
 
 function App() {

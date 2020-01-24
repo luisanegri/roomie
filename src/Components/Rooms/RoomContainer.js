@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Room from './Room';
-import { getRoom } from '../actions/room';
+import { getRoom } from '../../actions/room';
 
 export class RoomContainer extends Component {
   componentDidMount() {

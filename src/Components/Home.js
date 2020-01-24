@@ -8,9 +8,10 @@ const styles = {
   titleHome: {
     textAlign: 'center',
     color: 'white',
-    fontSize: '35px',
+    fontSize: '45px',
     fontFamily: 'Poppins',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textShadow: '0 1px 3px rgba(34,36,38,.5)'
   }
 };
 
