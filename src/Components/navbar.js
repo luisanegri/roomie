@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 const styles = {
   logo: {
@@ -13,7 +14,10 @@ const styles = {
   btnNav: {
     color: '#FB9A64',
     border: '1px solid',
-    textTransform: 'capitalize'
+    fontSize: '12px'
+  },
+  linkNav: {
+    textDecoration: 'none'
   }
 };
 
@@ -29,14 +33,18 @@ function Navbar(props) {
             spacing={24}
           >
             <Grid item>
-              <Typography variant="h6" className={classes.logo}>
-                Roomie
-              </Typography>
+              <Link to="/" className={classes.linkNav}>
+                <Typography variant="h6" className={classes.logo}>
+                  Roomie
+                </Typography>
+              </Link>
             </Grid>
             <Grid item>
-              <Button color="inherit" className={classes.btnNav}>
-                List room
-              </Button>
+              <Link to="/add" className={classes.linkNav}>
+                <Button color="inherit" className={classes.btnNav}>
+                  List a room
+                </Button>
+              </Link>
             </Grid>
           </Grid>
         </Toolbar>

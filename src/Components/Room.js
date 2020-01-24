@@ -70,22 +70,20 @@ const styles = {
 };
 
 function Room(props) {
-  const { classes } = props;
+  console.log('props room', props);
+  const { classes, room } = props;
   return (
     <div>
       <Container maxWidth="lg" className={classes.wrapper}>
         <Grid container spacing={3}>
           <Grid item xs={7}>
-            <img
-              className={classes.imgRoom}
-              src="https://live.staticflickr.com/5034/5796076897_17825fa53d_b.jpg"
-            />
+            <img className={classes.imgRoom} src={room.image} />
           </Grid>
           <Grid item xs={5}>
             <Card className={classes.card} variant="outlined">
               <CardContent className={classes.cardCustom}>
                 <Typography component="span" className={classes.price}>
-                  €800
+                  €{room.rent}
                 </Typography>
                 <Typography component="span"> per month</Typography>
               </CardContent>
@@ -152,14 +150,7 @@ function Room(props) {
                   <Typography component="h4" className={classes.titleDesc}>
                     Description
                   </Typography>
-                  <Typography component="p">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </Typography>
+                  <Typography component="p">{room.description}</Typography>
                 </CardContent>
               </Card>
             </section>
@@ -175,19 +166,25 @@ function Room(props) {
                       <Typography component="span" className={classes.price}>
                         Price:
                       </Typography>
-                      <Typography component="span"> €800 per month</Typography>
+                      <Typography component="span">
+                        {' '}
+                        €{room.rent} per month
+                      </Typography>
                     </li>
                     <li>
                       <Typography component="span" className={classes.price}>
                         Deposit:
                       </Typography>
-                      <Typography component="span"> €860</Typography>
+                      <Typography component="span"> €{room.deposit}</Typography>
                     </li>
                     <li>
                       <Typography component="span" className={classes.price}>
                         Bills:
                       </Typography>
-                      <Typography component="span"> €60 per month</Typography>
+                      <Typography component="span">
+                        {' '}
+                        €{room.bills} per month
+                      </Typography>
                     </li>
                   </ul>
                   <Typography component="p">

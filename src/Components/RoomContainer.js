@@ -17,7 +17,7 @@ export class RoomContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  room: state.room
+  room: state.rooms
 });
 
 const mapDispatchToProps = { getRoom };
